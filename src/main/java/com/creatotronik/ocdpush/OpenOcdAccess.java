@@ -8,8 +8,8 @@ public class OpenOcdAccess extends Socket {
     private final BufferedReader inputReader;
     private final BufferedWriter outputWriter;
 
-    public OpenOcdAccess() throws IOException {
-        super("localhost", 4444);
+    public OpenOcdAccess(String host) throws IOException {
+        super(host, 4444);
 
         inputReader = new BufferedReader(
                 new InputStreamReader(getInputStream()));
